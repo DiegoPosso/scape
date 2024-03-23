@@ -1,0 +1,359 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+
+/* SETEAR ESTILOS POR DEFECTO */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Madurai", sans-serif;
+    font-style: normal;
+}
+
+/* DEFINIMOS VARIABLES DE MARCA */
+:root{
+    --color-primary:#6644B8;
+    --color-secundary:#bb00bd;
+    --color-fondoA:#221039;
+    --color-fondoB:#37274b;
+}
+
+/* ESTILOS PAGINA INICIAL */
+
+#cont-inicio{
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: url(../img/home-img.png)var(--color-fondoA);
+    text-align: center;
+    padding-top: 415px;
+}
+
+#cont-inicio p{
+    color: #fff;
+    font-size: 18px;
+    padding: 0 60px;
+}
+
+.btn-principal{
+    padding: 14px 40px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+    text-decoration: none;
+    margin: 20px auto 10px;
+    border: none;
+}
+
+.btn-secundario{
+    padding: 14px 40px;
+    background: var(--color-fondoB);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+    text-decoration: none;
+    margin: 20px auto 10px;
+}
+
+
+/* Estilos registro */
+
+#cont-registro{
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: url(../img/home-img.png)var(--color-fondoA);
+    text-align: center;
+    padding-top: 200px;
+}
+
+#cont-registro p{
+    color: #fff;
+    font-size: 18px;
+    padding: 0 60px;
+}
+
+#cont-registro form{
+    width: 90%;
+    margin: 40px auto 0;
+}
+
+#cont-registro form input{
+    font-size: 20px;
+    height:55px;
+   display: block;
+   width: 100%;
+   padding: 10px 20px;
+   border: 2px #fff solid;
+   background: transparent;
+   color: #fff;
+   margin: 10px 0;
+   border-radius: 8px;
+
+}   
+
+
+/*ESTILOS HOME  */
+
+#cont-home{
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--color-fondoA);
+    position: relative;
+}
+
+#cont-home .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+#cont-home .header img{
+    width: 50px;
+
+}
+
+#cont-home .header img {
+    width: 50px;
+}
+
+#cont-home .header a:nth-child(3) img{
+    border-radius: 50%;
+    
+}
+
+#cont-home .filtros{
+    border: 2px solid var(--color-primary);
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    background: var(--color-fondoB);
+    border-radius: 12px;
+
+}
+
+#cont-home .filtros button{
+    background: transparent;
+    padding: 12px 10px;
+    width: 33.3;
+    border-radius: 8px;
+    border: none;
+    color: #ffff;
+
+}
+
+#cont-home .filtros button{
+    background: transparent;
+    padding: 12px 10px;
+    width: 33.3%;
+    border-radius: 12px;
+    border: none;
+    color: #ffff;
+
+}
+
+#cont-home .filtros button.active{
+    background: var(--color-primary);
+    color: #ffff;
+    font-weight:800px ;
+
+}
+
+/* Estilos categorias */
+
+#copy-category{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#cont-aventuras{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+#cont-aventuras{
+    color: #ffff;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+#cont-aventuras hr{
+    width: 160px;
+    border: 2px solid var(--color-primary);
+    margin:  4px 0 20px;
+    
+}
+
+.cont-caratulas{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.caratula{
+    background: #fff ;
+    border: none;
+    border-radius: 20px 0 20px 0;
+    width: 270px;
+    margin:0 10px 0 0;
+}
+
+.caratula img{
+    width: 160px;
+    border-radius: 20px 0 20px 0;
+}
+
+.modal-pelicula{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: #221039f2;
+    display: none;
+}
+
+.modal-pelicula.active{
+    display: block;
+}
+
+.modal-pelicula button{
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    z-index: 99;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+}
+
+.modal-pelicula .caratula-img {
+    width: 100%;
+}
+
+.modal-pelicula .btn-play {
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+.modal-pelicula h2{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primary);
+
+}
+
+.modal-pelicula p{
+    color: #fff;
+    font-size: 18px;
+    margin: 6px 0;
+    
+
+}
+
+/* Estilos panel lateral */
+
+#panel-lateral{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    left: -1500px;
+    top: 0;
+    z-index: 100;
+    background: var(--color-fondoA);
+    transition: 3s;
+}
+
+#panel-lateral.active{
+    left: 0;
+    z-index: 100;
+    transition: 1s;
+}
+
+#panel-lateral button{
+    position: absolute;
+    background: transparent;
+    border: transparent;
+    left: 300px;
+    padding-top: 25px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#panel-lateral img{
+    width: 50px;
+}
+
+
+#panel-lateral a:nth-child(1) img{
+    border-radius: 40%;
+}
+
+#panel-lateral h2{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 120px 40px 0;
+    padding-bottom: 5px;
+    
+}
+
+#panel-lateral hr{
+    margin-top: 10px;
+    width: 230px;
+    border: 2px solid var(--color-primary);
+    margin-left: 35px;
+}
+
+#panel-lateral ul{
+   width: 45%;
+   margin: 0px 0 20px 20px;
+}
+
+#panel-lateral ul a{
+    display: block;
+    padding: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+   
+}
+
+#panel-lateral .cerrarSesion{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 35px;
+}
+
+
+
+
+
+
+
